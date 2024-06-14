@@ -1,0 +1,150 @@
+
+
+.main
+{
+    text-align: center;
+    padding:0 4.2%;
+
+    &__img-desktop{
+        display: none;
+    }
+
+    &__img-mobile 
+    {
+        width: 100%;
+        display: block;
+        max-width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    &__content 
+    {
+        padding: 3em 0;
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title 
+    {
+        font-size: 2.25rem;
+        color: $color-Black;
+    }
+
+    &__btn
+    {
+        @extend .btn-3;
+    }
+
+
+    &__clients
+    {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3em;
+    }
+
+    &__client 
+    {
+        display: block;
+        &-databiz img
+        {
+            width: 81px;
+        }
+
+        &-audiophile img
+        {
+            width: 52px;
+        }
+
+
+        &-meet img
+        {
+            width: 64px;
+        }
+
+        &-maker img
+        {
+            width: 58px;
+        }
+    }
+
+}
+
+
+@media (min-width: 768px)
+{
+    .main
+    {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+
+        &__img-desktop
+        {
+            display: block;
+            width: 42%;
+            max-width: 960px;
+        }
+
+        &__img-mobile
+        {
+            display: none;
+        }
+
+        &__content 
+        {
+            padding: 0;
+            margin-left: 0;
+            width: 47%;
+        }
+        
+        &__title
+        {
+            font-size: 4.44rem;
+        }
+
+        &__btn
+        {
+            margin-bottom: 4em;
+        }
+
+        &__clients
+        {
+            position: absolute;
+            width: 47%;
+            max-width: 540px;
+            bottom: 0px;
+        }
+        
+        &__client
+        {
+            &-databiz img
+            {
+                width: 113px;
+            }
+
+            &-audiophile img 
+            {
+                width: 73px;
+            }
+
+            &-meet img 
+            {
+                width: 89px;
+            }
+
+            &-maker img 
+            {
+                width: 82px;
+            }
+        }
+       
+    }
+}

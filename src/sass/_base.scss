@@ -1,0 +1,24 @@
+$color-AlmostWhite: #FAFAFA;
+$color-LightGrey: #ADADAD;
+$color-MediumGrey: #686868;
+$color-Black: #151515;
+
+
+body 
+{
+    margin: 0;
+    font-family: "Epilogue", sans-serif;
+    background-color: $color-AlmostWhite;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+* :first-child {
+    margin-top: 0;
+}
+
+* :last-child {
+    margin-bottom: 0;
+}

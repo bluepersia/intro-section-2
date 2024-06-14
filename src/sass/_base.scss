@@ -96,13 +96,6 @@ body
         gap:1em;
     }
 
-    &__item-features, &__item-company
-    {
-        &--open .nav__img-arrow
-        {
-            transform: rotate(180deg);
-        }
-    }
 
     &__features, &__company 
     {

@@ -69,6 +69,22 @@
     border-radius: 14px;
  }
 
+ .btn-3 
+ {
+    @extend .btn;
+    padding: .75em 1.5em;
+    border-radius: 15px;
+    background-color: $color-Black;
+    color: $color-AlmostWhite;
+    border:transparent solid 1px;
+
+    &:hover
+    {
+        background:transparent;
+        border-color: $color-Black;
+    }
+ }
+
 
 
  .dropdown

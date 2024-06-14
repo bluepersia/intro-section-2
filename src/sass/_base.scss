@@ -12,7 +12,9 @@ body
     background-color: $color-AlmostWhite;
     color: $color-MediumGrey;
 }
-
+p {
+    line-height: 1.6;
+}
 * {
     box-sizing: border-box;
 }

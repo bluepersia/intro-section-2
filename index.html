@@ -19,24 +19,83 @@
 </head>
 <body>
 
-  Features
-  Company
-  Careers
-  About
+  <header class="header">
+    <img src="./images/logo.svg" alt="Snap logo" class="header__logo"/>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item nav__item-features"><a href="#" class="nav__link">Features</a><svg class="nav__img-arrow" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg></li>
+        <li class="nav__item nav__item-company"><a href="#" class="nav__link">Company</a><svg class="nav__img-arrow" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg></li>
+        <li class="nav__item"><a href="#" class="nav__link">Careers</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+      </ul>
+    </nav>
 
-  Login
-  Register
+    <img src="./images/icon-menu.svg" alt="Menu button" class="header__btn-menu"/>
 
-  Make remote work
+    <div class="header__btns">
+      <button class="header__btn-login">Login</button>
+      <button class="header__btn-register">Register</button>
+    </div>
+    
+    <ul class="header__features">
+      <li class="dropdown__item"><img src='./images/icon-todo.svg' alt="Todo icon" class="dropdown__icon"/><a href="#" class="dropdown__link">Todo List</a></li>
+      <li class="dropdown__item"><img src='./images/icon-calendar.svg' alt="Calendar icon" class="dropdown__icon"/><a href="#" class="dropdown__link">Calendar</a></li>
+      <li class="dropdown__item"><img src='./images/icon-reminders.svg' alt="Reminders icon" class="dropdown__icon"/><a href="#" class="dropdown__link">Reminders</a></li>
+      <li class="dropdown__item"><img src='./images/icon-planning.svg' alt="Planning icon" class="dropdown__icon"/><a href="#" class="dropdown__link">Planning</a></li>
+    </ul>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+    <ul class="header__company">
+      <li class="dropdown__item"><a href="#" class="dropdown__link"></a>History</li>
+      <li class="dropdown__item"><a href="#" class="dropdown__link"></a>Our Team</li>
+      <li class="dropdown__item"><a href="#" class="dropdown__link"></a>Blog</li>
+    </ul>
+  </header>
 
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="main">
+    <img src="./images/image-hero-mobile.png" alt="Man using a laptop" class="main__img-mobile"/>
+    <div class="main__content">
+      <h1 class="main__title">Make remote work</h1>
+      <p class="main__body">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <button class="main__btn">Learn more</button>
+      <ul class="main__clients">
+        <li class="main__client-item"><img src="./images/client-databiz.svg" alt="Databiz logo" class="main__img-client"/></li>
+        <li class="main__client-item"><img src="./images/client-audiophile.svg" alt="Audiophile logo" class="main__img-client"/></li>
+        <li class="main__client-item"><img src="./images/client-meet.svg" alt="Meet logo" class="main__img-client"/></li>
+        <li class="main__client-item"><img src="./images/client-maker.svg" alt="Maker logo" class="main__img-client"/></li>
+      </ul>
+    </div>
+    <img src="./images/image-hero-desktop.png" alt="Man using a laptop" class="main__img-desktop"/>
+  </div>
+
+  <div class="overlay">
+    <div class="menu-mobile">
+      <img src="./images/icon-close-menu.svg" alt="Close menu button" class="menu-mobile__btn-close"/>
+
+      <nav class="nav-mobile">
+        <ul class="nav-mobile__list">
+          <li class="nav__item"><a href="#" class="nav__link">Features</a><img src="./images/icon-arrow-down.svg" alt="Arrow" class="nav-mobile__img-arrow"/></li>
+          <ul class="nav-mobile__features">
+            <li class="dropdown__item"><img src='./images/icon-todo.svg' alt="Todo icon" class="dropdown__icon"/><a href="#" class="dropdown__link">Todo List</a></li>
+            <li class="dropdown__item"><img src='./images/icon-calendar.svg' alt="Calendar icon" class="dropdown__icon"/><a href="#" class="dropdown__link">Calendar</a></li>
+            <li class="dropdown__item"><img src='./images/icon-reminders.svg' alt="Reminders icon" class="dropdown__icon"/><a href="#" class="dropdown__link">Reminders</a></li>
+            <li class="dropdown__item"><img src='./images/icon-planning.svg' alt="Planning icon" class="dropdown__icon"/><a href="#" class="dropdown__link">Planning</a></li>
+          </ul>
+          <li class="nav__item"><a href="#" class="nav__link">Company</a><img src="./images/icon-arrow-down.svg" alt="Arrow" class="nav-mobile__img-arrow"/></li>
+          <ul class="nav-mobile__company">
+            <li class="dropdown__item"><a href="#" class="dropdown__link"></a>History</li>
+            <li class="dropdown__item"><a href="#" class="dropdown__link"></a>Our Team</li>
+            <li class="dropdown__item"><a href="#" class="dropdown__link"></a>Blog</li>
+          </ul>
+          <li class="nav__item"><a href="#" class="nav__link">Careers</a><img src="./images/icon-arrow-down.svg" alt="Arrow" class="nav-mobile__img-arrow"/></li>
+          <li class="nav__item"><a href="#" class="nav__link">About</a><img src="./images/icon-arrow-down.svg" alt="Arrow" class="nav-mobile__img-arrow"/></li>
+        </ul>
+      </nav>
+
+      <div class="menu-mobile__btns">
+        <button class="menu-mobile-btn-login">Login</button>
+        <button class="menu-mobile-btn-register">Register</button>
+      </div>
+    </div>
   </div>
 </body>
 </html>

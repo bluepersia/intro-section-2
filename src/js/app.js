@@ -3,17 +3,16 @@ const companyDesktop = document.querySelector ('.header__company');
 const featuresMobile = document.querySelector ('.nav-mobile__features');
 const companyMobile = document.querySelector ('.nav-mobile__company');
 
-const featuresNavItem =document.querySelector ('.nav__item-features');
-const companyNavItem = document.querySelector ('.nav__item-company');
-const featuresNavItemMobile = document.querySelector ('.nav-mobile__item-features');
-const companyNavItemMobile = document.querySelector ('.nav-mobile__item-company');
+const featuresNavItem =document.querySelectorAll ('.nav__item-features');
+const companyNavItem = document.querySelectorAll('.nav__item-company');
 
 const mobileMenu = document.querySelector ('.menu-mobile');
 
-featuresNavItem.addEventListener ('click', (e) => {e.stopPropagation(); openFeatures();});
-companyNavItem.addEventListener ('click', (e) => {e.stopPropagation(); openCompany();});
-featuresNavItemMobile.addEventListener ('click', (e) => {e.stopPropagation(); openFeatures();});
-companyNavItemMobile.addEventListener ('click', (e) => {e.stopPropagation(); openCompany();});
+let isFeaturesOpen = false;
+let isCompanyOpen = false;
+
+featuresNavItem.forEach (el => el.addEventListener ('click', (e) => {e.stopPropagation(); openFeatures();}));
+companyNavItem.forEach (el => el.addEventListener ('click', (e) => {e.stopPropagation(); openCompany();}));
 document.querySelector ('.header__btn-menu').addEventListener ('click', openMobileMenu);
 document.querySelector ('.menu-mobile__btn-close').addEventListener ('click', closeMobileMenu);
 
@@ -29,27 +28,34 @@ function closeAll ()
 
 function openFeatures ()
 {
+    if (isFeaturesOpen)
+    {
+        closeAll ();
+        return;
+    }
     closeCompany ();
-    featuresNavItem.classList.add ('nav__item-features--open');
+    featuresNavItem.forEach (el => el.classList.add ('nav__item-features--open'));
     featuresDesktop.classList.add ('header__features--open');
     featuresMobile.classList.add ('nav-mobile__features--open');
-    featuresNavItemMobile.classList.add ('nav-mobile__item-features--open');
+
+    isFeaturesOpen = true;
 
     updateFeaturesPosition ();
 }
 
 function closeFeatures ()
 {
-    featuresNavItem.classList.remove ('nav__item-features--open');
+    featuresNavItem.forEach (el => el.classList.remove ('nav__item-features--open'));
     featuresDesktop.classList.remove ('header__features--open');
     featuresMobile.classList.remove ('nav-mobile__features--open');
-    featuresNavItemMobile.classList.remove ('nav-mobile__item-features--open');
+
+    isFeaturesOpen = false;
 }
 
 function updateFeaturesPosition ()
 {
     if(window.innerWidth >= 768)
-        featuresDesktop.style.left = featuresNavItem.getBoundingClientRect ().left + 'px';
+        featuresDesktop.style.left = featuresNavItem[0].getBoundingClientRect ().left + 'px';
 }
 
 
@@ -57,28 +63,35 @@ function updateFeaturesPosition ()
 
 function openCompany ()
 {
+    if (isCompanyOpen)
+    {
+        closeAll ();
+        return;
+    }
     closeFeatures ();
-    companyNavItem.classList.add ('nav__item-company--open');
+    companyNavItem.forEach (el => el.classList.add ('nav__item-company--open'));
     companyDesktop.classList.add ('header__company--open');
     companyMobile.classList.add ('nav-mobile__company--open');
-    companyNavItemMobile.classList.add ('nav-mobile__item-company--open');
+
+    isCompanyOpen = true;
 
     updateCompanyPosition ();
 }
 
 function closeCompany ()
 {
-    companyNavItem.classList.remove ('nav__item-company--open');
+    companyNavItem.forEach (el => el.classList.remove ('nav__item-company--open'));
     companyDesktop.classList.remove ('header__company--open');
     companyMobile.classList.remove ('nav-mobile__company--open');
-    companyNavItemMobile.classList.remove ('nav-mobile__item-company--open');
+
+    isCompanyOpen = false;
 }
 
 
 function updateCompanyPosition ()
 {
     if(window.innerWidth >= 768)
-        companyDesktop.style.left = companyNavItem.getBoundingClientRect ().left + 'px';
+        companyDesktop.style.left = companyNavItem[0].getBoundingClientRect ().left + 'px';
 }
 
 

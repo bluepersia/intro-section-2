@@ -65,9 +65,6 @@ body {
   flex-direction: column;
   gap: 1em;
 }
-.nav-mobile__item-features--open .nav__img-arrow, .nav-mobile__item-company--open .nav__img-arrow {
-  transform: rotate(180deg);
-}
 .nav-mobile__features, .nav-mobile__company {
   display: flex;
   flex-direction: column;

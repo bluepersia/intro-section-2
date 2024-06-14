@@ -74,6 +74,12 @@
 
 }
 
+@media (min-width: 768px)
+{
+    .main {
+        padding: 0 5%;
+    }
+}
 
 @media (min-width: 868px)
 {
@@ -146,5 +152,14 @@
             }
         }
        
+    }
+}
+
+
+@media (min-width:1440px)
+{
+    .main {
+
+        padding: 0 11.4%;
     }
 }

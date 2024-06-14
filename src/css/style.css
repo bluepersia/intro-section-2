@@ -283,6 +283,11 @@ p {
   width: 58px;
 }
 
+@media (min-width: 768px) {
+  .main {
+    padding: 0 5%;
+  }
+}
 @media (min-width: 868px) {
   .main {
     text-align: left;
@@ -327,6 +332,11 @@ p {
   }
   .main__client-maker img {
     width: 82px;
+  }
+}
+@media (min-width: 1440px) {
+  .main {
+    padding: 0 11.4%;
   }
 }
 

@@ -82,7 +82,7 @@ p {
   width: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 886px) {
   html {
     font-size: 18px;
   }
@@ -218,7 +218,7 @@ p {
   transform: rotate(180deg);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 868px) {
   .header {
     padding: 1.166rem 2.77% 3.72rem;
   }
@@ -283,7 +283,7 @@ p {
   width: 58px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 868px) {
   .main {
     text-align: left;
     display: flex;

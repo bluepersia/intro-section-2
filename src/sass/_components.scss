@@ -1,0 +1,94 @@
+
+.body-s 
+{
+    font-size: .875rem;
+}
+
+
+.nav 
+{
+    &__item 
+    {
+        transition: color 300ms;
+        &:hover
+        {
+            color: $color-Black;
+
+            & path 
+            {
+                stroke: $color-Black;
+            }
+        }
+
+        & path 
+        {
+            transition: stroke 300ms;
+        }
+    }
+    &__link 
+    {
+        color:inherit;
+        text-decoration: none;
+
+       
+    }
+
+    &__img-arrow 
+        {
+            margin-left: .57em;
+        }
+}
+
+.btn 
+{
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    color:inherit;
+    cursor: pointer;
+    transition: all 300ms;
+
+    &:hover 
+    {
+        color: $color-Black;
+        border-color: $color-Black;
+    }
+}
+
+.btn-1 
+{
+    @extend .btn;
+    border:none;
+}
+
+.btn-2
+ {
+    @extend .btn;
+    border:solid 1.5px $color-MediumGrey;
+    padding: .92em 1.64em;
+    border-radius: 14px;
+ }
+
+
+
+ .dropdown
+ {
+    &__link 
+    {
+        text-decoration: none;
+        color:inherit;
+        transition:color 300ms;
+        cursor: pointer;
+        &:hover 
+        {
+            color: $color-Black;
+        }
+    }
+
+    &__item
+    {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+ }

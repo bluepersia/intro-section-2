@@ -1,4 +1,5 @@
 $color-AlmostWhite: #FAFAFA;
+$color-White:white;
 $color-LightGrey: #ADADAD;
 $color-MediumGrey: #686868;
 $color-Black: #151515;
@@ -22,4 +23,120 @@ body
 
 * :last-child {
     margin-bottom: 0;
+}
+
+
+.overlay {
+    position: fixed;
+    left:0px;
+    top:0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, 75%);
+    opacity: 0%;
+    pointer-events: none;
+    transition: opacity 300ms;
+
+    &--open
+    {
+        opacity: 100%;
+        pointer-events: all;
+
+        & .menu-mobile 
+        {
+            transform: translateX(0%);
+        }
+    }
+}
+
+.menu-mobile 
+{
+    background-color: $color-White;
+    width: 64%;
+    margin-left: auto;
+    padding: 1.25em;
+    height: 100%;
+    transform: translateX(100%);
+    transition: all 300ms;
+
+    &__btn-close 
+    {
+        display: block;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    &__btns
+    {
+        display: flex;
+        flex-direction: column;
+        gap:1em;
+    }
+
+    &__btn-login
+    {
+        @extend .btn-1;
+    }
+
+    &__btn-register
+    {
+        @extend .btn-2;
+    }
+}
+
+.nav-mobile
+ {
+    margin-bottom: 2em;
+    &__list 
+    {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        gap:1em;
+    }
+
+    &__item-features, &__item-company
+    {
+        &--open .nav__img-arrow
+        {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__features, &__company 
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        display: none;
+
+        &--open
+        {
+            display: flex;
+        }
+    }
+
+    &__features
+    {
+        &__icon
+        {
+            width: 20px;
+        }
+    }
+
+    
+ }
+
+
+@media (min-width:768px)
+{
+    html {
+        font-size: 18px;
+    }
+
+    .overlay {
+        opacity: 0%;
+        pointer-events: none;
+    }
 }
